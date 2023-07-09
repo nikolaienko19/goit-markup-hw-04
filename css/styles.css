@@ -78,6 +78,9 @@ button {
     padding-top: 24px;
     padding-bottom: 24px;
     border-bottom: 1px solid var(--cornflower);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -117,10 +120,14 @@ button {
 
 }
 
+.nav-link.active {
+    color: var(--secondary-accent-color);
+}
+
 .nav-link.active::after {
     content: '';
     position: absolute;
-    bottom: -4px;
+    bottom: -1px;
 
     display: block;
     width: 100%;
@@ -186,6 +193,7 @@ button {
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg/bg-img.jpg);
     background-repeat: no-repeat;
     
+    background-position: center;
     background-size: cover;
     margin: auto;
     
@@ -221,7 +229,7 @@ button {
 
     padding: 16px 32px;
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -255,6 +263,7 @@ button {
     align-items: center;
     background-color: var(--secondary-white-color);
     border-radius: 4px;
+    margin-bottom: 8px;
 }
 
 
@@ -264,7 +273,6 @@ button {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--secondary-black-color);
-    margin-top: 8px;
     margin-bottom: 8px;
 }
 
@@ -328,7 +336,7 @@ button {
 }
 
 .team-cards-bottom {
-    padding: 32px 16px;
+    padding: 32px 0px;
 }
 
 
@@ -350,10 +358,11 @@ button {
 
 .team-networks-list {
     display: flex;
+    justify-content: center;
     gap: 24px;
 }
 
-.team-networks-item {
+.team-networks-link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -362,18 +371,19 @@ button {
     flex-shrink: 0;
     border-radius: 50%;
     background-color: var(--primary-accent-color);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-networks-item:hover,
-.team-networks-item:focus {
+.team-networks-link:hover,
+.team-networks-link:focus {
     background-color: var(--secondary-accent-color);
 }
 
 
 /* Customers styles */
 
-.customers-container {
-    padding-top: 120px;
+.customers {
+    padding: 120px 0;
 }
 
 .customers-title {
@@ -394,7 +404,7 @@ button {
     gap: 24px;
 }
 
-.customers-item {
+.customers-link {
     width: 168px;
     height: 88px;
 
@@ -414,12 +424,12 @@ button {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.customers-item:hover,
-.customers-item:focus {
+.customers-link:hover,
+.customers-link:focus {
     border-color:var(--secondary-accent-color);
 }
 
-.customers-item:hover .customers-icon{
+.customers-link:hover .customers-icon{
     fill: var(--secondary-accent-color);
 }
 
@@ -579,7 +589,7 @@ button {
     gap: 16px;
 }
 
-.footer-networks-item {
+.footer-networks-link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -592,8 +602,8 @@ button {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-networks-item:hover,
-.footer-networks-item:focus {
+.footer-networks-link:hover,
+.footer-networks-link:focus {
     background-color: var(--mint);
 }
 
