@@ -547,6 +547,10 @@ button {
     transform: translateY(0);
 }
 
+.examples-link:focus .overlay {
+    transform: translateY(0);
+}
+
 .examples-box {
     position: relative;
     overflow: hidden;
